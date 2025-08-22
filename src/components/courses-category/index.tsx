@@ -13,7 +13,7 @@ export default function CoursesCategory() {
   ];
 
   return (
-    <section className="container relative md:mt-20 sm:mt-14 mt-10">
+    <section id="category" className="container relative md:mt-20 sm:mt-14 mt-10">
       <div className="text-center">
         <h2
           className="text-[40px] sm:text-[44px] md:text-[48px] leading-[1.2] font-bold text-(--primary-color)"
@@ -39,7 +39,7 @@ export default function CoursesCategory() {
       </div>
 
       <div className="mt-8 flex items-center justify-center">
-        <button className="px-7 py-3 text-sm font-medium text-(--primary-color) border border-(--primary-color) rounded-[10px]">
+        <button className="h-[42px] w-[177px] text-sm font-medium text-(--primary-color) border border-(--primary-color) rounded-[10px]">
           view all
         </button>
       </div>

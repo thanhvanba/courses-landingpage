@@ -14,13 +14,15 @@ function App() {
   return (
     <>
       <Header />
-      <Banner />
-      <PopularCourses />
-      <CoursesCategory />
-      <Benefits />
-      <Training />
-      <CallToAction />
-      <Slider />
+      <div className='flex flex-col gap-3 md:gap-28'>
+        <Banner />
+        <PopularCourses />
+        <CoursesCategory />
+        <Benefits />
+        <Training />
+        <CallToAction />
+        <Slider />
+      </div>
       <Footer />
     </>
   )

@@ -17,3 +17,8 @@
   --primary-color: #0b7077;
   --secondary-color: #fd661f;
 }
+
+/* Offset anchor scrolling to account for fixed header height */
+html {
+  scroll-padding-top: 100px; /* adjust if header height changes */
+}
