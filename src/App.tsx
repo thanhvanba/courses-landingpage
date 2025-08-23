@@ -13,8 +13,8 @@ function App() {
   return (
     <>
       <Header />
-      <Banner />
-      <div className="space-y-28">
+      <div className="flex flex-col gap-3 md:gap-28">
+        <Banner />
         <PopularCourses />
         <CoursesCategory />
         <Benefits />

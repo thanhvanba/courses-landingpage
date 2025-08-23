@@ -5,33 +5,39 @@ import avt2 from "../../assets/images/avt-2.png";
 import avatar from "../../assets/images/avatar.png";
 import ellipse from "../../assets/images/ellipse.png";
 import exploreMore from "../../assets/images/explore-more.png";
+import line from "../../assets/images/line.png";
 import { MdOutlineStarHalf, MdOutlineStarPurple500 } from "react-icons/md";
 import { BiCalendar } from "react-icons/bi";
 import { RiBarChartLine } from "react-icons/ri";
 
 export default function Banner() {
   return (
-    <div>
+    <section id="home">
       <div
-        className="rounded-b-xl md:rounded-b-4xl bg-cover bg-center md:h-[650px] w-[wv]]"
+        className="rounded-b-xl md:rounded-b-4xl bg-cover bg-center lg:h-[650px] w-[wv]] mb-12"
         style={{
           backgroundImage: `url(${banner})`,
         }}
       >
+        <img
+          className="absolute top-0 right-0 z-0 w-full"
+          src={line}
+          alt=""
+        />
         <div className="container relative">
-          <div className="px-3 md:px-0 pt-6 md:pt-36 flex justify-between pb-4">
-            <div className="w-full md:w-[672px] pt-16">
+          <div className="px-3 md:px-0 pt-18 lg:pt-36 flex justify-between pb-4">
+            <div className="w-full md:w-[672px] flex flex-col justify-center">
               <div className="w-32 md:w-52 bg-white bg-opacity-80 px-2 md:px-4 py-0.5 md:py-2 text-center rounded-lg text-[10px] md:text-base">
                 Never stop learning
               </div>
-              <div className="text-[26px] md:text-[64px] text-(--primary-color) font-bold mt-2 md:leading-[75px]">
+              <div className="text-[26px] md:text-[40px] lg:text-[64px] text-(--primary-color) font-bold mt-2 md:leading-[50px] lg:leading-[75px]">
                 Grow up your skills by online courses with Onlearning
               </div>
-              <div className="text-lg mt-2 md:mt-4 flex flex-col md:flex-row gap-4 md:gap-2">
+              <div className="text-lg mt-2 md:mt-4 flex flex-col lg:flex-row gap-4 lg:gap-2">
                 <button className="w-fit bg-(--secondary-color) px-2 md:px-8 py-1 md:py-4 rounded-md md:rounded-xl text-[10px] md:text-base text-white">
                   EXPLORE PATH
                 </button>
-                <div className="flex gap-2">
+                <div className="flex gap-2 z-10">
                   <div className="flex h-8 md:h-14 ">
                     <img className="" src={avt1} alt="" />
                     <img className="-ml-2 md:-ml-4" src={avt2} alt="" />
@@ -61,9 +67,9 @@ export default function Banner() {
                 </div>
               </div>
             </div>
-            <div className="hidden md:block relative">
-              <img src={avatar} alt="" />
-              <div className="absolute flex justify-between items-center -left-24 bottom-36 w-80 text-center bg-white/90 text-lg px-6 py-5 rounded-3xl z-10">
+            <div className="hidden md:flex relative flex-col items-end justify-end">
+              <img src={avatar} alt="" className="" />
+              <div className="absolute hidden lg:flex justify-between items-center -left-24 bottom-36 w-80 text-center bg-white/90 text-lg px-6 py-5 rounded-3xl z-10">
                 <div className="bg-[#23BDEE] p-1 flex justify-center items-center rounded-xl h-12 w-12">
                   <BiCalendar className="text-3xl text-white" />
                 </div>
@@ -80,16 +86,16 @@ export default function Banner() {
               </div>
             </div>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="flex justify-center items-center absolute -bottom-24 left-1/2 -translate-x-1/2">
               <img src={ellipse} alt="" />
             </div>
-            <div className="flex justify-center items-center absolute -bottom-20 left-1/2 -translate-x-1/2 h-40 w-40">
+            <div className="flex justify-center items-center absolute -bottom-18 left-1/2 -translate-x-1/2 h-40 w-40">
               <img src={exploreMore} alt="" />
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
