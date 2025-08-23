@@ -1,8 +1,8 @@
-import logo from "../../assets/images/logo.png";
-import exploreMore from "../../assets/images/explore-more.png"; 
 import { useEffect, useState } from "react";
-import { MdMenu } from "react-icons/md";
 import { HiXMark } from "react-icons/hi2";
+import { MdMenu } from "react-icons/md";
+import exploreMore from "../../assets/images/explore-more.png";
+import logo from "../../assets/images/logo.png";
 
 export default function Header() {
   const [activeMenu, setActiveMenu] = useState("home");
@@ -40,17 +40,18 @@ export default function Header() {
           <img src={logo} alt="Logo" className="h-8 md:h-10" />
 
           {/* Desktop menu */}
-          <nav className="hidden lh:flex flex-grow justify-center !z-20">
+          <nav className="hidden lg:flex flex-grow justify-center !z-20">
             <ul className="flex items-center space-x-12">
               {menus.map((menu) => (
                 <li key={menu.key}>
                   <a
                     href={menu.href}
                     onClick={() => setActiveMenu(menu.key)}
-                    className={`text-lg font-medium transition-colors duration-200 ${activeMenu === menu.key
+                    className={`text-lg font-medium transition-colors duration-200 ${
+                      activeMenu === menu.key
                         ? "text-(--secondary-color)"
                         : "text-gray-700 hover:text-(--secondary-color)"
-                      }`}
+                    }`}
                   >
                     {menu.label}
                   </a>
@@ -87,10 +88,11 @@ export default function Header() {
                     setActiveMenu(menu.key);
                     setOpen(false);
                   }}
-                  className={`block text-base font-medium ${activeMenu === menu.key
+                  className={`block text-base font-medium ${
+                    activeMenu === menu.key
                       ? "text-(--secondary-color)"
                       : "text-gray-700 hover:text-(--secondary-colors)"
-                    }`}
+                  }`}
                 >
                   {menu.label}
                 </a>
