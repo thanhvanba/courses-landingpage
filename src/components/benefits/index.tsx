@@ -6,7 +6,7 @@ import users_icon from "../../assets/images/benefits/users_icon.png";
 export default function Benefits() {
   return (
     <section id="benefits" className="container">
-      <div className="px-12 grid min-[1200px]:grid-cols-2 grid-cols-1 gap-9">
+      <div className="grid min-[1200px]:grid-cols-2 grid-cols-1 gap-9">
         <div>
           <div className="text-lg p-2.5 px-6 rounded-[10px] text-(--primary-color) bg-[#F5F5F5] w-fit mb-6">
             Benefits
